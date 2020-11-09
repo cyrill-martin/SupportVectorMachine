@@ -11,3 +11,7 @@ Sample files are available in this repository.
 1. cd into the repository
 1. Enter training and live data into the according demo files. 
 1. Call the getTextClass function in the R script and indicate training data and/or live data
+
+## License
+
+CC0 1.0 Universal (CC0 1.0) Public Domain Dedication (see https://creativecommons.org/publicdomain/zero/1.0/ for details).
