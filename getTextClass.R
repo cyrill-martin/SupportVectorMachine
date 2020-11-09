@@ -1,4 +1,6 @@
 # Text classification with Support Vector Machines
+# CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+# (see https://creativecommons.org/publicdomain/zero/1.0/ for details)
 
 # Packages
 library(tm)
