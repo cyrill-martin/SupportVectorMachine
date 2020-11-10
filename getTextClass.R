@@ -69,7 +69,7 @@ getTextClass <- function(trainingData = NULL,
         lastTrainingRow <- numeric()
         firstLiveRow <- numeric()
         
-        # If it's about classifying live dat, use all dtm rows coming from trainingData
+        # If it's about classifying live data, use all dtm rows coming from trainingData
         # to build the model and classify the text from the remaining rows
         if(live == TRUE) {
                 lastTrainingRow <- nrow(trainingData)
@@ -81,8 +81,8 @@ getTextClass <- function(trainingData = NULL,
                 firstLiveRow <- lastTrainingRow + 1 
         }
         
-        # Support Vector Machines
-        # -----------------------
+        # Support Vector Machine
+        # ----------------------
 
         container <- create_container(dtm, input$Class, trainSize = 1:lastTrainingRow, testSize = firstLiveRow:totalRows, virgin = virgin)
         model <- train_model(container, "SVM", kernel = "linear")
@@ -103,7 +103,7 @@ getTextClass <- function(trainingData = NULL,
 
         print(paste("results saved as", output))
         
-        # Print accuracy of model to consolre if it's not about classifying live data
+        # Print accuracy of model to console if it's not about classifying live data
         if(live == FALSE) {
                 accuracy <- recall_accuracy(input$Class[firstLiveRow:totalRows], results[,"SVM_LABEL"])
                 print(paste("accuracy:", accuracy))
